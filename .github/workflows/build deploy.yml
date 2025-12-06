@@ -1,13 +1,16 @@
 name: Build and Deploy Code
 
-on: [push,pull_request]
+on: 
+  push:
+  pull_request:
 
 jobs:
   job1:
-   runs-on: ubuntu-latest
-   steps:
-    -  name: pulling git repo
-       uses: action/checkout@v2
-    -  name: fast learning
-       run: echo "hi all"
-   
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pulling git repo
+        uses: actions/checkout@v2
+
+      - name: Fast learning
+        run: echo "hi all"
