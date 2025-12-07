@@ -72,4 +72,4 @@ jobs:
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi:latest
 
       - name: Show image digest
-        run: echo "Image digest: ${{ steps.build-push.outputs.digest }}"
+        run: echo  ${{ steps.build-push.outputs.digest }}
