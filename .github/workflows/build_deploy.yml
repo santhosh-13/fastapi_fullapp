@@ -75,3 +75,12 @@ jobs:
 
       - name: Show image digest
         run: echo  ${{ steps.build-push.outputs.digest }}
+
+
+  deploy:
+     runs-on: ubuntu-latest
+     needs: [build]
+
+     steps:
+       - name: deploying stuff
+         run: echo "going to deploy some stuff"
